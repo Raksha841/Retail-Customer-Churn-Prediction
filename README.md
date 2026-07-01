@@ -1,6 +1,6 @@
 # Retail-Customer-Churn-Prediction
 ML classification model predicting customer churn from retail transaction data, with an AI-powered risk assistant.
-# Context
+## Context
 
 A classification model that identifies high-risk customers likely to churn, built from raw retail transaction and demographic data. Designed to help an online retail business proactively target at-risk customers before they leave — maximizing Customer Lifetime Value (CLV) through early intervention.
 
@@ -66,6 +66,6 @@ Python, pandas, NumPy, scikit-learn (DecisionTreeClassifier, KNeighborsClassifie
 - `churn_prediction_model.ipynb` — full analysis notebook: data cleaning, EDA, feature engineering, model building, tuning, and evaluation
 
 ## Author
-
 Raksha Chabhadia 
+
 MBA - Business Analytics
