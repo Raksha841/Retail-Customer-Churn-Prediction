@@ -63,9 +63,8 @@ Python, pandas, NumPy, scikit-learn (DecisionTreeClassifier, KNeighborsClassifie
 
 ## Files
 
-- `churn_prediction_model.ipynb` — full analysis notebook: data cleaning, EDA, feature engineering, model building, tuning, and evaluation
+- `Churn_Prediction_Model.ipynb` — full analysis notebook: data cleaning, EDA, feature engineering, model building, tuning, and evaluation
 
 ## Author
 Raksha Chabhadia 
-
 MBA - Business Analytics
