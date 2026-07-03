@@ -6,32 +6,32 @@ A classification model that identifies high-risk customers likely to churn, buil
 
 ## Business Problem
 
-Customer churn is a major cost center in online retail — acquiring a new customer is significantly more expensive than retaining an existing one. This project builds a predictive model to flag customers at risk of churning based on their transaction history and demographic profile, so the business can proactively offer retention incentives, personalized outreach, or targeted promotions.
+Customer churn is a major cost center in online retail acquiring a new customer is significantly more expensive than retaining an existing one. This project builds a predictive model to flag customers at risk of churning based on their transaction history and demographic profile, so the business can proactively offer retention incentives, personalized outreach, or targeted promotions.
 
 **Hypothesis:** A customer's purchasing behavior (transaction frequency, total spending, recency of last purchase, product category diversity) is a strong predictor of future churn.
 
-**Optimization target:** F1-score and Recall — prioritizing the business's ability to catch as many true churners as possible while maintaining a reasonable precision/recall balance.
+**Optimization target:** F1-score and Recall prioritizing the business's ability to catch as many true churners as possible while maintaining a reasonable precision/recall balance.
 
 ## Dataset
 
 - 23,000 raw transaction records across 16 columns, cleaned to ~20,860 after removing duplicates and negative-quantity (return) entries
 - Aggregated into a customer-level dataset using RFM-style features:
-  - **Recency** — days since last purchase
-  - **Frequency** — total number of transactions
-  - **Monetary** — total amount spent
-  - **Unique Product Categories** — breadth of product categories purchased
-  - **Gender**, **Most Frequent Store Type**
-  - **Churn** — binary label, threshold set at 90 days of inactivity
+  - **Recency**: days since last purchase
+  - **Frequency**: total number of transactions
+  - **Monetary**: total amount spent
+  - **Unique Product Categories**: breadth of product categories purchased
+  - **Gender**
+  - **Most Frequent Store Type**
+  - **Churn**: binary label, threshold set at 90 days of inactivity
 
 ## Approach
-
-1. **Data cleaning & feature engineering** — deduplication, outlier treatment (IQR method), datetime conversion, and construction of RFM-style features from raw transaction logs
-2. **Exploratory data analysis** — univariate and bivariate analysis (pair plots, correlation heatmap) to understand churn drivers; Recency emerged as the strongest visual separator between churned and active customers
-3. **Modeling** — three classifiers built and compared:
+1. **Data cleaning & feature engineering**: deduplication, outlier treatment (IQR method), datetime conversion, and construction of RFM-style features from raw transaction logs
+2. **Exploratory data analysis**: univariate and bivariate analysis (pair plots, correlation heatmap) to understand churn drivers; Recency emerged as the strongest visual separator between churned and active customers
+3. **Modeling**: three classifiers built and compared:
    - Decision Tree (baseline + GridSearchCV-tuned, with class weighting to address class imbalance)
    - K-Nearest Neighbors
    - Logistic Regression
-4. **Evaluation** — precision, recall, F1-score, confusion matrices, and ROC/AUC comparison across all three models
+4. **Evaluation**: precision, recall, F1-score, confusion matrices, and ROC/AUC comparison across all three models
 
 ## Key Results
 
