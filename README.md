@@ -2,7 +2,7 @@
 ML classification model predicting customer churn from retail transaction data, with an AI-powered risk assistant.
 ## Context
 
-A classification model that identifies high-risk customers likely to churn, built from raw retail transaction and demographic data. Designed to help an online retail business proactively target at-risk customers before they leave — maximizing Customer Lifetime Value (CLV) through early intervention.
+A classification model that identifies high-risk customers likely to churn, built from raw retail transaction and demographic data. Designed to help an online retail business proactively target at-risk customers before they leave -maximizing Customer Lifetime Value (CLV) through early intervention.
 
 ## Business Problem
 
@@ -14,7 +14,7 @@ Customer churn is a major cost center in online retail — acquiring a new custo
 
 ## Dataset
 
-- ~23,000 raw transaction records across 16 columns, cleaned to ~20,860 after removing duplicates and negative-quantity (return) entries
+- 23,000 raw transaction records across 16 columns, cleaned to ~20,860 after removing duplicates and negative-quantity (return) entries
 - Aggregated into a customer-level dataset using RFM-style features:
   - **Recency** — days since last purchase
   - **Frequency** — total number of transactions
@@ -42,7 +42,6 @@ Customer churn is a major cost center in online retail — acquiring a new custo
 | KNN (k=5) | 0.665 | 0.719 | 0.873 | 0.789 | 0.5349 |
 | Logistic Regression | 0.716 | 0.716 | **1.000** | 0.834 | 0.5066 |
 
-*(All metrics on held-out test set)*
 
 Logistic Regression achieved perfect recall and tied for the highest F1-score, aligning with the business goal of catching every potential churner. However, its near-random AUC (0.51) and zero specificity revealed this came from classifying almost every customer as a churner rather than genuine discriminatory power. The **tuned Decision Tree** achieved comparable recall (0.999) and F1 (0.834) while showing the best actual separation between churners and non-churners (AUC 0.62), making it the more balanced choice. **Monetary value** and **age at transaction** were the most influential features in the tree's decisions.
 
@@ -63,7 +62,7 @@ Python, pandas, NumPy, scikit-learn (DecisionTreeClassifier, KNeighborsClassifie
 
 ## Files
 
-- `Churn_Prediction_Model.ipynb` — full analysis notebook: data cleaning, EDA, feature engineering, model building, tuning, and evaluation
+- `Churn_Prediction_Model.ipynb`: full analysis notebook: data cleaning, EDA, feature engineering, model building, tuning, and evaluation
 
 ## Author
 Raksha Chabhadia 
