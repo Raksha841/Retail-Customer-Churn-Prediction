@@ -20,8 +20,8 @@ Customer churn is a major cost center in online retail acquiring a new customer 
   - **Frequency**: total number of transactions
   - **Monetary**: total amount spent
   - **Unique Product Categories**: breadth of product categories purchased
-  - **Gender**
-  - **Most Frequent Store Type**
+  - **Gender**: Gender of the Customer
+  - **Most Frequent Store Type**:Type of store customer prefers to buy
   - **Churn**: binary label, threshold set at 90 days of inactivity
 
 ## Approach
